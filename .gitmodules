@@ -22,3 +22,6 @@
 [submodule "Submodules/glTF"]
 	path = Submodules/glTF
 	url = https://github.com/XRTK/glTF.git
+[submodule "Submodules/WebXR"]
+	path = Submodules/WebXR
+	url = https://github.com/XRTK/WebXR.git

@@ -71,4 +71,4 @@ extends:
       - StandaloneLinux64
       - Android
       - Lumin
-      #- WebGL
+      - WebGL
