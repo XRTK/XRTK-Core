@@ -107,11 +107,6 @@ namespace XRTK.Editor.BuildPipeline
         string Configuration { get; set; }
 
         /// <summary>
-        /// The build platform architecture (i.e. x86, x64, ARM, ARM64)
-        /// </summary>
-        string Architecture { get; set; }
-
-        /// <summary>
         /// Parses command line args via <see cref="Environment.GetCommandLineArgs"/>
         /// </summary>
         /// <remarks>

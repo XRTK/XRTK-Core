@@ -3,7 +3,6 @@
 
 using System;
 using UnityEngine;
-using UnityEngine.XR;
 using XRTK.Definitions.CameraSystem;
 using XRTK.Extensions;
 using XRTK.Interfaces.CameraSystem;
@@ -83,13 +82,23 @@ namespace XRTK.Providers.CameraSystem
         private bool cameraOpaqueLastFrame;
 
         /// <inheritdoc />
-        public virtual bool IsOpaque => true;
+        public virtual bool IsOpaque
+        {
+            get
+            {
+#if UNITY_2020_1_OR_NEWER
+                return XRDeviceUtilities.IsDisplayOpaque;
+#else
+                return true;
+#endif // UNITY_2020_1_OR_NEWER
+            }
+        }
 
         /// <inheritdoc />
         public virtual bool IsStereoscopic => CameraRig.PlayerCamera.stereoEnabled;
 
         /// <inheritdoc />
-        public virtual bool HeadHeightIsManagedByDevice => XRDevice.isPresent;
+        public virtual bool HeadHeightIsManagedByDevice => XRDeviceUtilities.IsDevicePresent;
 
         /// <inheritdoc />
         public IMixedRealityCameraRig CameraRig { get; private set; }

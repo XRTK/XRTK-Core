@@ -1,22 +1,26 @@
 {
     "name": "XRTK.Tests",
+    "rootNamespace": "XRTK.Tests",
     "references": [
         "GUID:f3241d040533491e8a1e2714b27c3111",
         "GUID:e67d30660ec243e4836aac191d3f36fb",
         "GUID:60a1dda7b8376464f89e6b89eb538044",
-        "GUID:395bd8dd25074437ba735310022f8f0a"
-    ],
-    "optionalUnityReferences": [
-        "TestAssemblies"
+        "GUID:27619889b8ba8c24980f49ee34dbb44a",
+        "GUID:0acc523941302664db1f4e527237feb3"
     ],
     "includePlatforms": [
         "Editor"
     ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": []
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

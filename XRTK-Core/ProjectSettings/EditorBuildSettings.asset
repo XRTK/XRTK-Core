@@ -8,4 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/XRTK.Examples/BaseScene.unity
     guid: 092b39bb8f12afa498a539bd456a71d6
-  m_configObjects: {}
+  m_configObjects:
+    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: c1ab88c6e8137d949b3ba9d7c77ff5eb,
+      type: 2}
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: bf4ca4b201eff6f47bfcf89c2053db39,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 5af59a24e6269e640b3d590f7858d172,
+      type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: f99b452b5394cbd47888a25c1ab5cc02,
+      type: 2}

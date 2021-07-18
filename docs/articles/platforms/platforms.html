@@ -72,20 +72,20 @@
 <p>A major component of the Mixed Reality Toolkit is the Platform definitions that was employed to both accurately determine what platforms have been added to the scope of the project and also to determine when a platform is active/running.</p>
 <h2 id="current-platforms">Current Platforms</h2>
 <ul>
-<li>OpenVR - Default runtime platform for Windows Standalone, no special consideration.</li>
-<li><a href="oculus.html">Oculus</a></li>
-<li><a href="windowsmixedreality.html">Windows Mixed Reality (UWP)</a></li>
 <li><a href="magicleap.html">Magic Leap (Lumin)</a></li>
+<li><a href="oculus.html">Oculus</a></li>
+<li>OpenVR - Default runtime platform for Windows Standalone, no special consideration.</li>
+<li><a href="ultraleap.html">Ultraleap</a></li>
+<li><a href="windowsmixedreality.html">Windows Mixed Reality (UWP)</a></li>
 </ul>
 <h2 id="in-development">In development</h2>
 <ul>
-<li><a href="steamvr.html">SteamVR</a></li>
 <li><a href="etee.html">etee</a></li>
-<li><a href="ultraleap.html">Ultraleap</a></li>
+<li><a href="steamvr.html">SteamVR</a></li>
 <li><a href="webxr.html">WebXR</a></li>
 </ul>
 <h2 id="platform-selection">Platform Selection</h2>
-<p><img src="../../images/Configuration/Platforms/PlatformSelector.png" alt=""></p>
+<p><img src="../../images/Configuration/Platforms/PlatformSelector.png" alt="Platform Selector"></p>
 <p>Wherever configuration can have a variant for platforms, to make the configuration only active when selected platforms are available, the Platform selector is employed.</p>
 <p>The list support multiple selections (for cases where a system or profile) can operate for multiple platforms.</p>
 <p>The list is dynamic and will update based on which XRTK platforms have been installed and what platforms are supported by the developers Unity installation.</p>
@@ -100,9 +100,9 @@
 <p>It also includes a set of <code>PlatformOverrides</code> which help to specify which targets a platform should be available for by default.</p>
 <h2 id="platform-default-configuration">Platform Default Configuration</h2>
 <p>Included with each platform, a default platform configuration asset is provided to help automatically deploy the necessary configuration to operate a platform, usually including the Camera System and COntroller configuration, but can include others as required.  This is located within the <code>Profiles</code> folder of the <code>XRTK.Generated</code> folder for the specific platform, for example:</p>
-<p><img src="../../images/Configuration/Platforms/PlatformConfigurationDefaults.png" alt=""></p>
+<p><img src="../../images/Configuration/Platforms/PlatformConfigurationDefaults.png" alt="Profiles"></p>
 <p>Once selected, the default configuration will appear in the inspector and a <code>Install Platform Service Configuration</code> button is available to install the configuration in to your current scene.</p>
-<p><img src="../../images/Configuration/Platforms/PlatformServiceConfigurationProfile.png" alt=""></p>
+<p><img src="../../images/Configuration/Platforms/PlatformServiceConfigurationProfile.png" alt="Install Platform Configuration"></p>
 <blockquote>
 <p><strong>There must be an existing <code>MixedRealityToolkit</code> GameObject in the scene for the configuration installation to be successful.</strong></p>
 </blockquote>

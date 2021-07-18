@@ -3,12 +3,14 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
+using XRTK.Extensions;
 using XRTK.Utilities.Async;
 
 namespace XRTK.Utilities.WebRequestRest
@@ -209,6 +211,8 @@ namespace XRTK.Utilities.WebRequestRest
 
         #region Get Multimedia Content
 
+        private static string DownloadCacheDirectory => $"{Application.temporaryCachePath}\\download_cache";
+
         /// <summary>
         /// Download a <see cref="Texture2D"/> from the provided <see cref="url"/>.
         /// </summary>
@@ -219,6 +223,13 @@ namespace XRTK.Utilities.WebRequestRest
         /// <returns>A new <see cref="Texture2D"/> instance.</returns>
         public static async Task<Texture2D> DownloadTextureAsync(string url, Dictionary<string, string> headers = null, IProgress<float> progress = null, int timeout = -1)
         {
+            bool isCached = TryGetDownloadCacheItem(url, out var cachePath);
+
+            if (isCached)
+            {
+                url = cachePath;
+            }
+
             using (var webRequest = UnityWebRequestTexture.GetTexture(url))
             {
                 var response = await ProcessRequestAsync(webRequest, headers, progress, timeout);
@@ -230,7 +241,17 @@ namespace XRTK.Utilities.WebRequestRest
                     return null;
                 }
 
-                return ((DownloadHandlerTexture)webRequest.downloadHandler).texture;
+                var downloadHandler = (DownloadHandlerTexture)webRequest.downloadHandler;
+
+                if (!isCached)
+                {
+                    using (var fileStream = File.OpenWrite(cachePath))
+                    {
+                        await fileStream.WriteAsync(downloadHandler.data, 0, downloadHandler.data.Length, CancellationToken.None);
+                    }
+                }
+
+                return downloadHandler.texture;
             }
         }
 
@@ -245,6 +266,13 @@ namespace XRTK.Utilities.WebRequestRest
         /// <returns>A new <see cref="AudioClip"/> instance.</returns>
         public static async Task<AudioClip> DownloadAudioClipAsync(string url, AudioType audioType, Dictionary<string, string> headers = null, IProgress<float> progress = null, int timeout = -1)
         {
+            bool isCached = TryGetDownloadCacheItem(url, out var cachePath);
+
+            if (isCached)
+            {
+                url = cachePath;
+            }
+
             using (var webRequest = UnityWebRequestMultimedia.GetAudioClip(url, audioType))
             {
                 var response = await ProcessRequestAsync(webRequest, headers, progress, timeout);
@@ -256,7 +284,17 @@ namespace XRTK.Utilities.WebRequestRest
                     return null;
                 }
 
-                return ((DownloadHandlerAudioClip)webRequest.downloadHandler).audioClip;
+                var downloadHandler = (DownloadHandlerAudioClip)webRequest.downloadHandler;
+
+                if (!isCached)
+                {
+                    using (var fileStream = File.OpenWrite(cachePath))
+                    {
+                        await fileStream.WriteAsync(downloadHandler.data, 0, downloadHandler.data.Length, CancellationToken.None);
+                    }
+                }
+
+                return downloadHandler.audioClip;
             }
         }
 
@@ -270,6 +308,11 @@ namespace XRTK.Utilities.WebRequestRest
         /// <returns>A new <see cref="AssetBundle"/> instance.</returns>
         public static async Task<AssetBundle> DownloadAssetBundleAsync(string url, Dictionary<string, string> headers = null, IProgress<float> progress = null, int timeout = -1)
         {
+            if (TryGetDownloadCacheItem(url, out var cachePath))
+            {
+                return await AssetBundle.LoadFromFileAsync(cachePath);
+            }
+
             using (var webRequest = UnityWebRequestAssetBundle.GetAssetBundle(url))
             {
                 var response = await ProcessRequestAsync(webRequest, headers, progress, timeout);
@@ -281,7 +324,93 @@ namespace XRTK.Utilities.WebRequestRest
                     return null;
                 }
 
-                return ((DownloadHandlerAssetBundle)webRequest.downloadHandler).assetBundle;
+                var downloadHandler = (DownloadHandlerAssetBundle)webRequest.downloadHandler;
+
+                using (var fileStream = File.OpenWrite(cachePath))
+                {
+                    await fileStream.WriteAsync(downloadHandler.data, 0, downloadHandler.data.Length, CancellationToken.None);
+                }
+
+                return downloadHandler.assetBundle;
+            }
+        }
+
+        /// <summary>
+        /// Download a file from the provided <see cref="url"/>.
+        /// </summary>
+        /// <param name="url">The url to download the file from.</param>
+        /// <param name="fileName">Optional file name to download (including extension).</param>
+        /// <param name="headers">Optional header information for the request.</param>
+        /// <param name="progress">Optional <see cref="IProgress{T}"/> handler.</param>
+        /// <param name="timeout">Optional time in seconds before request expires.</param>
+        /// <returns>The path to the downloaded file.</returns>
+        public static async Task<string> DownloadFileAsync(string url, string fileName = null, Dictionary<string, string> headers = null, IProgress<float> progress = null, int timeout = -1)
+        {
+            if (string.IsNullOrWhiteSpace(fileName))
+            {
+                // We will try go guess the name based on the url endpoint.
+                var index = url.LastIndexOf('/');
+                fileName = url.Substring(index, url.Length - index);
+            }
+
+            ValidateCacheDirectory();
+            var filePath = $"{DownloadCacheDirectory}\\{fileName}";
+
+            if (File.Exists(filePath))
+            {
+                return filePath;
+            }
+
+            using (var webRequest = UnityWebRequest.Get(url))
+            using (var fileDownloadHandler = new DownloadHandlerFile(filePath)
+            {
+                removeFileOnAbort = true
+            })
+            {
+                webRequest.downloadHandler = fileDownloadHandler;
+                var response = await ProcessRequestAsync(webRequest, headers, progress, timeout);
+                fileDownloadHandler.Dispose();
+
+                if (!response.Successful)
+                {
+                    Debug.LogError($"Failed to download file from \"{url}\"!");
+
+                    return null;
+                }
+
+                return filePath;
+            }
+        }
+
+        private static void ValidateCacheDirectory()
+        {
+            if (!Directory.Exists(DownloadCacheDirectory))
+            {
+                Directory.CreateDirectory(DownloadCacheDirectory);
+            }
+        }
+
+        /// <summary>
+        /// Try to get a file out of the download cache by uri reference.
+        /// </summary>
+        /// <param name="uri">The uri key of the item.</param>
+        /// <param name="filePath">The file path to the cached item.</param>
+        /// <returns>True, if the item was in cache, otherwise false.</returns>
+        public static bool TryGetDownloadCacheItem(string uri, out string filePath)
+        {
+            ValidateCacheDirectory();
+            filePath = $"{DownloadCacheDirectory}\\{uri.GenerateGuid()}";
+            return File.Exists(filePath);
+        }
+
+        /// <summary>
+        /// Deletes all the files in the download cache.
+        /// </summary>
+        public static void DeleteDownloadCache()
+        {
+            if (Directory.Exists(DownloadCacheDirectory))
+            {
+                Directory.Delete(DownloadCacheDirectory, true);
             }
         }
 
@@ -337,7 +466,11 @@ namespace XRTK.Utilities.WebRequestRest
             backgroundThread.Join();
             progress?.Report(100f);
 
+#if UNITY_2020_1_OR_NEWER
+            if (webRequest.result == UnityWebRequest.Result.ConnectionError || webRequest.result == UnityWebRequest.Result.ProtocolError)
+#else
             if (webRequest.isNetworkError || webRequest.isHttpError)
+#endif
             {
                 if (webRequest.responseCode == 401)
                 {
@@ -351,10 +484,21 @@ namespace XRTK.Utilities.WebRequestRest
 
                 var responseHeaders = webRequest.GetResponseHeaders().Aggregate(string.Empty, (current, header) => $"\n{header.Key}: {header.Value}");
                 Debug.LogError($"REST Error {webRequest.responseCode}:{webRequest.downloadHandler?.text}{responseHeaders}");
-                return new Response(false, $"{responseHeaders}\n{webRequest.downloadHandler?.text}", webRequest.downloadHandler?.data, webRequest.responseCode);
+                return new Response(false, $"{responseHeaders}\n{webRequest.downloadHandler?.text}", null, webRequest.responseCode);
             }
 
-            return new Response(true, webRequest.downloadHandler?.text, webRequest.downloadHandler?.data, webRequest.responseCode);
+            switch (webRequest.downloadHandler)
+            {
+                case DownloadHandlerFile _:
+                case DownloadHandlerBuffer _:
+                case DownloadHandlerScript _:
+                case DownloadHandlerTexture _:
+                case DownloadHandlerAudioClip _:
+                case DownloadHandlerAssetBundle _:
+                    return new Response(true, null, null, webRequest.responseCode);
+                default:
+                    return new Response(true, webRequest.downloadHandler?.text, webRequest.downloadHandler?.data, webRequest.responseCode);
+            }
         }
     }
 }

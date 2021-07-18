@@ -1,30 +1,18 @@
 [submodule "Submodules/ARCore"]
 	path = Submodules/ARCore
 	url = https://github.com/XRTK/ARCore.git
-[submodule "Submodules/Etee"]
-	path = Submodules/Etee
-	url = https://github.com/XRTK/Etee.git
 [submodule "Submodules/Examples"]
 	path = Submodules/Examples
 	url = https://github.com/XRTK/Examples.git
-[submodule "Submodules/Lenovo"]
-	path = Submodules/Lenovo
-	url = https://github.com/XRTK/Lenovo.git
 [submodule "Submodules/Lumin"]
 	path = Submodules/Lumin
 	url = https://github.com/XRTK/Lumin.git
-[submodule "Submodules/Nreal"]
-	path = Submodules/Nreal
-	url = https://github.com/XRTK/Nreal.git
 [submodule "Submodules/Oculus"]
 	path = Submodules/Oculus
 	url = https://github.com/XRTK/Oculus.git
 [submodule "Submodules/SDK"]
 	path = Submodules/SDK
 	url = https://github.com/XRTK/SDK.git
-[submodule "Submodules/SteamVR"]
-	path = Submodules/SteamVR
-	url = https://github.com/XRTK/SteamVR.git
 [submodule "Submodules/Ultraleap"]
 	path = Submodules/Ultraleap
 	url = https://github.com/XRTK/Ultraleap.git

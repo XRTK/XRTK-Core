@@ -19,7 +19,7 @@ namespace XRTK.Definitions.Controllers.Hands
         private float gripThreshold = .8f;
 
         /// <summary>
-        /// Threshold in range [0, 1] that defines when a hand is considered to be grabing.
+        /// Threshold in range [0, 1] that defines when a hand is considered to be grabbing.
         /// </summary>
         public float GripThreshold => gripThreshold;
 

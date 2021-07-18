@@ -163,7 +163,7 @@ namespace XRTK.Extensions
 
             void OnErrorDataReceived(object sender, DataReceivedEventArgs args)
             {
-                if (args.Data != null)
+                if (!string.IsNullOrWhiteSpace(args.Data))
                 {
                     errorList.Add(args.Data);
 
@@ -182,7 +182,7 @@ namespace XRTK.Extensions
 
             void OnOutputDataReceived(object sender, DataReceivedEventArgs args)
             {
-                if (args.Data != null)
+                if (!string.IsNullOrWhiteSpace(args.Data))
                 {
                     outputList.Add(args.Data);
 

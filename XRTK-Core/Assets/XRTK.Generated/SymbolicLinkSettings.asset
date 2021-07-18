@@ -45,39 +45,9 @@ MonoBehaviour:
     isActive: 1
   - sourceRelativePath: /Submodules/Ultraleap/XRTK.Ultraleap/Packages/com.xrtk.ultraleap
     targetRelativePath: /XRTK-Core/Packages/com.xrtk.ultraleap
-    isActive: 0
-  - sourceRelativePath: /Submodules/Nreal/XRTK.Nreal/Packages/com.xrtk.nreal
-    targetRelativePath: /XRTK-Core/Packages/com.xrtk.nreal
-    isActive: 0
-  - sourceRelativePath: /Submodules/Nreal/XRTK.Nreal/Packages/com.xrtk.nreal/Profiles~
-    targetRelativePath: /XRTK-Core/Assets/XRTK.Generated/Nreal/Profiles
     isActive: 1
   - sourceRelativePath: /Submodules/Ultraleap/XRTK.Ultraleap/Packages/com.xrtk.ultraleap/Profiles~
     targetRelativePath: /XRTK-Core/Assets/XRTK.Generated/Ultraleap/Profiles
-    isActive: 1
-  - sourceRelativePath: /Submodules/Lenovo/XRTK.Lenovo/Packages/com.xrtk.lenovo/Profiles~
-    targetRelativePath: /XRTK-Core/Assets/XRTK.Generated/Lenovo/Profiles
-    isActive: 1
-  - sourceRelativePath: /Submodules/Lenovo/XRTK.Lenovo/Packages/com.xrtk.lenovo
-    targetRelativePath: /XRTK-Core/Packages/com.xrtk.lenovo
-    isActive: 0
-  - sourceRelativePath: /Submodules/ARCore/XRTK.ARCore/Packages/com.xrtk.arcore
-    targetRelativePath: /XRTK-Core/Packages/com.xrtk.arcore
-    isActive: 0
-  - sourceRelativePath: /Submodules/ARCore/XRTK.ARCore/Packages/com.xrtk.arcore/Profiles~
-    targetRelativePath: /XRTK-Core/Assets/XRTK.Generated/ARCore/Profiles
-    isActive: 1
-  - sourceRelativePath: /Submodules/Etee/XRTK.Etee/Packages/com.xrtk.etee/Profiles~
-    targetRelativePath: /XRTK-Core/Assets/XRTK.Generated/Etee/Profiles
-    isActive: 1
-  - sourceRelativePath: /Submodules/Etee/XRTK.Etee/Packages/com.xrtk.etee
-    targetRelativePath: /XRTK-Core/Packages/com.xrtk.etee
-    isActive: 0
-  - sourceRelativePath: /Submodules/SteamVR/XRTK.SteamVR/Packages/com.xrtk.steamvr
-    targetRelativePath: /XRTK-Core/Packages/com.xrtk.steamvr
-    isActive: 0
-  - sourceRelativePath: /Submodules/SteamVR/XRTK.SteamVR/Packages/com.xrtk.steamvr/Profiles~
-    targetRelativePath: /XRTK-Core/Assets/XRTK.Generated/SteamVR/Profiles
     isActive: 1
   - sourceRelativePath: /Submodules/glTF/XRTK.glTF/Packages/com.xrtk.gltf
     targetRelativePath: /XRTK-Core/Packages/com.xrtk.gltf

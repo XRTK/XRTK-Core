@@ -80,7 +80,7 @@
 <p><code>https://github.com/XRTK/XRTK-Core.git#upm</code></p>
 </blockquote>
 </li>
-<li><a href="#git-submodules">GIT Submodules</a> - For advanced developers who want to use the Mixed Reality Toolkit in their live project and contribute direcly back to the project in real time.</li>
+<li><a href="#git-submodules">GIT Submodules</a> - For advanced developers who want to use the Mixed Reality Toolkit in their live project and contribute directly back to the project in real time.</li>
 </ul>
 <p>In this article, we will walk through each approach to get you up and running, starting with the simplest first.</p>
 <h2 id="register-upm-server-in-project-settings">Register UPM Server in Project Settings</h2>
@@ -101,6 +101,7 @@ Scope(s): com.xrtk
 <blockquote>
 <p>We recommend starting with the <strong>XRTK.SDK</strong> package to begin with, which will also install the Core XRTK package, for the simplest path to begin with.</p>
 </blockquote>
+<p>Once you've installed all the packages you wish to utilize, you can continue to <a href="00-GettingStarted.html#configure-your-base-scene">Configuring your base scene</a>.</p>
 <h2 id="automatic-upm-installation">Automatic UPM Installation</h2>
 <p>Our preferred deployment approach is to fully utilize <a href="https://docs.unity3d.com/Manual/upm-ui.html">Unity's native package manager</a> to incorporate the Mixed Reality Toolkit in your solution, akin to the other modules Unity provides out of the box.  This is the quickest and safest way to get Mixed Reality Toolkit in your solution and is automatically updated as new releases are published.</p>
 <p>Download the <a href="https://github.com/XRTK/XRTK-Core/releases">XRTK-Core.unitypackage</a> asset, then drag and drop it into your project window.  This adds an Mixed Reality Toolkit seed, that will automatically register the Mixed Reality Toolkit's scoped registry with the Unity package manager, then starts searching for the latest release packages on the upm server.</p>
@@ -140,8 +141,8 @@ Scope(s): com.xrtk
 </blockquote>
 <h3 id="prerequisites">Prerequisites</h3>
 <ul>
-<li>Each contributor to the project will need to have <a href="https://git-scm.com/">git installed</a> on their machines with the proper envionment variable set so the symbolic linker can find and execute git commands via the terminal.</li>
-<li>You'll need to install the core pacakge via one of the <a href="#automatic-upm-installation">traditional installation</a> paths before you can create symbolic links in your project using the editor context menu in later setup steps.</li>
+<li>Each contributor to the project will need to have <a href="https://git-scm.com/">git installed</a> on their machines with the proper environment variable set so the symbolic linker can find and execute git commands via the terminal.</li>
+<li>You'll need to install the core package via one of the <a href="#automatic-upm-installation">traditional installation</a> paths before you can create symbolic links in your project using the editor context menu in later setup steps.</li>
 </ul>
 <h3 id="setup-steps">Setup Steps</h3>
 <ol>
@@ -163,9 +164,9 @@ Scope(s): com.xrtk
 <p><font color="orange"><strong>Important:</strong></font> It's strongly advised to use the <code>Packages</code> folder as your target path for all symbolically linked packages.</p>
 </blockquote>
 </li>
-<li>Repeat step 4 for each additoinal package you'd like to directly modify.</li>
+<li>Repeat step 4 for each additional package you'd like to directly modify.</li>
 </ol>
-<p>This workflow works with any project using GIT and the symbolically linked folders can be customized to utilize any path availible under source control.</p>
+<p>This workflow works with any project using GIT and the symbolically linked folders can be customized to utilize any path available under source control.</p>
 <hr>
 <h3 id="related-articles">Related Articles</h3>
 <ul>

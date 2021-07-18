@@ -18,7 +18,6 @@ The following capabilities are in development and likely to be available for the
 2. WebXR controllers
 3. WebXR Hands tracking
 
-
 ## Quickstart (preview, subject to change)
 
 The quickstart guide will be updated once the platform is released.

@@ -113,7 +113,7 @@ namespace XRTK.Editor.BuildPipeline
             }
         }
 
-        private static string GetValidVersionString(string version)
+        public static string GetValidVersionString(string version)
         {
             if (string.IsNullOrWhiteSpace(version))
             {

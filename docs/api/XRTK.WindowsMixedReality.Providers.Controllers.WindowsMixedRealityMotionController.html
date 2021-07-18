@@ -81,7 +81,7 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><a class="xref" href="XRTK.Providers.Controllers.BaseController.html">BaseController</a></div>
     <div class="level2"><span class="xref">WindowsMixedRealityMotionController</span></div>
-      <div class="level3"><a class="xref" href="XRTK.WindowsMixedReality.Providers.Controllers.HololensOneController.html">HololensOneController</a></div>
+      <div class="level3"><a class="xref" href="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityHololensOneController.html">WindowsMixedRealityHololensOneController</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -91,15 +91,6 @@
     <h5>Inherited Members</h5>
     <div>
       <a class="xref" href="XRTK.Providers.Controllers.BaseController.html#XRTK_Providers_Controllers_BaseController_InputSystem">BaseController.InputSystem</a>
-    </div>
-    <div>
-      <a class="xref" href="XRTK.Providers.Controllers.BaseController.html#XRTK_Providers_Controllers_BaseController_UpdateController">BaseController.UpdateController()</a>
-    </div>
-    <div>
-      <a class="xref" href="XRTK.Providers.Controllers.BaseController.html#XRTK_Providers_Controllers_BaseController_AssignControllerMappings_XRTK_Definitions_Devices_MixedRealityInteractionMapping___">BaseController.AssignControllerMappings(MixedRealityInteractionMapping[])</a>
-    </div>
-    <div>
-      <a class="xref" href="XRTK.Providers.Controllers.BaseController.html#XRTK_Providers_Controllers_BaseController_TryRenderControllerModel_System_Boolean_">BaseController.TryRenderControllerModel(Boolean)</a>
     </div>
     <div>
       <a class="xref" href="XRTK.Providers.Controllers.BaseController.html#XRTK_Providers_Controllers_BaseController_GripPoseOffset">BaseController.GripPoseOffset</a>
@@ -144,6 +135,15 @@
       <a class="xref" href="XRTK.Providers.Controllers.BaseController.html#XRTK_Providers_Controllers_BaseController_Velocity">BaseController.Velocity</a>
     </div>
     <div>
+      <a class="xref" href="XRTK.Providers.Controllers.BaseController.html#XRTK_Providers_Controllers_BaseController_UpdateController">BaseController.UpdateController()</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.BaseController.html#XRTK_Providers_Controllers_BaseController_AssignControllerMappings_XRTK_Definitions_Devices_MixedRealityInteractionMapping___">BaseController.AssignControllerMappings(MixedRealityInteractionMapping[])</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.BaseController.html#XRTK_Providers_Controllers_BaseController_TryRenderControllerModel_System_Boolean_">BaseController.TryRenderControllerModel(Boolean)</a>
+    </div>
+    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
     </div>
     <div>
@@ -169,8 +169,7 @@
   <h6><strong>Assembly</strong>: XRTK.WindowsMixedReality.dll</h6>
   <h5 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete]
-[Guid(&quot;37AA1554-3D46-4C72-AAC4-31023775F62B&quot;)]
+    <pre><code class="lang-csharp hljs">[Guid(&quot;37AA1554-3D46-4C72-AAC4-31023775F62B&quot;)]
 public class WindowsMixedRealityMotionController : BaseController, IMixedRealityController</code></pre>
   </div>
   <h3 id="constructors">Constructors
@@ -180,7 +179,7 @@ public class WindowsMixedRealityMotionController : BaseController, IMixedReality
     <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController__ctor.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityMotionController.cs/#L45">View Source</a>
+    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityMotionController.cs/#L30">View Source</a>
   </span>
   <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController__ctor_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.#ctor*"></a>
   <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController__ctor" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.#ctor">WindowsMixedRealityMotionController()</h4>
@@ -195,7 +194,7 @@ public class WindowsMixedRealityMotionController : BaseController, IMixedReality
     <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController__ctor_XRTK_Interfaces_Providers_Controllers_IMixedRealityControllerDataProvider_XRTK_Definitions_Devices_TrackingState_XRTK_Definitions_Utilities_Handedness_XRTK_Definitions_Controllers_MixedRealityControllerMappingProfile_.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.%23ctor(XRTK.Interfaces.Providers.Controllers.IMixedRealityControllerDataProvider%2CXRTK.Definitions.Devices.TrackingState%2CXRTK.Definitions.Utilities.Handedness%2CXRTK.Definitions.Controllers.MixedRealityControllerMappingProfile)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityMotionController.cs/#L48">View Source</a>
+    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityMotionController.cs/#L33">View Source</a>
   </span>
   <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController__ctor_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.#ctor*"></a>
   <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController__ctor_XRTK_Interfaces_Providers_Controllers_IMixedRealityControllerDataProvider_XRTK_Definitions_Devices_TrackingState_XRTK_Definitions_Utilities_Handedness_XRTK_Definitions_Controllers_MixedRealityControllerMappingProfile_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.#ctor(XRTK.Interfaces.Providers.Controllers.IMixedRealityControllerDataProvider,XRTK.Definitions.Devices.TrackingState,XRTK.Definitions.Utilities.Handedness,XRTK.Definitions.Controllers.MixedRealityControllerMappingProfile)">WindowsMixedRealityMotionController(IMixedRealityControllerDataProvider, TrackingState, Handedness, MixedRealityControllerMappingProfile)</h4>
@@ -248,7 +247,7 @@ public class WindowsMixedRealityMotionController : BaseController, IMixedReality
     <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController_DefaultInteractions.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.DefaultInteractions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityMotionController.cs/#L54">View Source</a>
+    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityMotionController.cs/#L37">View Source</a>
   </span>
   <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController_DefaultInteractions_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.DefaultInteractions*"></a>
   <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController_DefaultInteractions" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.DefaultInteractions">DefaultInteractions</h4>
@@ -281,7 +280,7 @@ public class WindowsMixedRealityMotionController : BaseController, IMixedReality
     <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController_DefaultLeftHandedInteractions.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.DefaultLeftHandedInteractions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityMotionController.cs/#L71">View Source</a>
+    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityMotionController.cs/#L54">View Source</a>
   </span>
   <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController_DefaultLeftHandedInteractions_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.DefaultLeftHandedInteractions*"></a>
   <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController_DefaultLeftHandedInteractions" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.DefaultLeftHandedInteractions">DefaultLeftHandedInteractions</h4>
@@ -314,7 +313,7 @@ public class WindowsMixedRealityMotionController : BaseController, IMixedReality
     <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController_DefaultRightHandedInteractions.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.DefaultRightHandedInteractions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityMotionController.cs/#L74">View Source</a>
+    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityMotionController.cs/#L57">View Source</a>
   </span>
   <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController_DefaultRightHandedInteractions_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.DefaultRightHandedInteractions*"></a>
   <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController_DefaultRightHandedInteractions" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.DefaultRightHandedInteractions">DefaultRightHandedInteractions</h4>
@@ -342,84 +341,11 @@ public class WindowsMixedRealityMotionController : BaseController, IMixedReality
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="XRTK.Providers.Controllers.BaseController.html#XRTK_Providers_Controllers_BaseController_DefaultRightHandedInteractions">BaseController.DefaultRightHandedInteractions</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController_LastSourceStateReading.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.LastSourceStateReading%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityMotionController.cs/#L81">View Source</a>
-  </span>
-  <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController_LastSourceStateReading_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.LastSourceStateReading*"></a>
-  <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController_LastSourceStateReading" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.LastSourceStateReading">LastSourceStateReading</h4>
-  <div class="markdown level1 summary"><p>The last updated source state reading for this Windows Mixed Reality Controller.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InteractionSourceState LastSourceStateReading { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://stephenhodgson.github.io/UnityCsReference/api/UnityEngine.XR.WSA.Input.InteractionSourceState.html">InteractionSourceState</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController_UpdateController_UnityEngine_XR_WSA_Input_InteractionSourceState_.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.UpdateController(UnityEngine.XR.WSA.Input.InteractionSourceState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityMotionController.cs/#L102">View Source</a>
-  </span>
-  <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController_UpdateController_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.UpdateController*"></a>
-  <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController_UpdateController_UnityEngine_XR_WSA_Input_InteractionSourceState_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController.UpdateController(UnityEngine.XR.WSA.Input.InteractionSourceState)">UpdateController(InteractionSourceState)</h4>
-  <div class="markdown level1 summary"><p>Update the controller data from the provided platform state</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateController(InteractionSourceState interactionSourceState)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://stephenhodgson.github.io/UnityCsReference/api/UnityEngine.XR.WSA.Input.InteractionSourceState.html">InteractionSourceState</a></td>
-        <td><span class="parametername">interactionSourceState</span></td>
-        <td><p>The InteractionSourceState retrieved from the platform</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="XRTK.Interfaces.Providers.Controllers.IMixedRealityController.html">IMixedRealityController</a>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="XRTK.Extensions.ConverterExtensions.html#XRTK_Extensions_ConverterExtensions_GetBuiltInTypeBytes__1___0_">ConverterExtensions.GetBuiltInTypeBytes&lt;T&gt;(T)</a>
-  </div>
-  <div>
-      <a class="xref" href="XRTK.Utilities.Async.Awaiters.html#XRTK_Utilities_Async_Awaiters_WaitUntil__1___0_System_Func___0_System_Boolean__System_Int32_">Awaiters.WaitUntil&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Int32)</a>
-  </div>
   <div>
       <a class="xref" href="XRTK.Extensions.ConverterExtensions.html#XRTK_Extensions_ConverterExtensions_GetBuiltInTypeBytes__1___0_">ConverterExtensions.GetBuiltInTypeBytes&lt;T&gt;(T)</a>
   </div>
@@ -437,7 +363,7 @@ public class WindowsMixedRealityMotionController : BaseController, IMixedReality
                     <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityMotionController.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityMotionController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityMotionController.cs/#L40" class="contribution-link">View Source</a>
+                    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityMotionController.cs/#L26" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

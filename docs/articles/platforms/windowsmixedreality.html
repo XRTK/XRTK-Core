@@ -102,35 +102,25 @@
 </ol>
 <h2 id="quickstart">Quickstart</h2>
 <ol>
-<li><p>Create a new Unity Project</p>
-</li>
-<li><p>Switch to the <code>UWP</code> platform in <code>Build Settings</code></p>
-</li>
-<li><p>Setup the Legacy XR settings in &quot;Edit -&gt; Project Settings -&gt; Player -&gt; XR Settings&quot; for <code>Windows Mixed Reality</code> to the <code>UWP</code> platform</p>
-</li>
-<li><p>Add the XRTK UPM registry to Unity by Opening the Unity Package Manager (<code>Window -&gt; Package manager</code>), selecting the <code>Advanced</code> drop down and clicking on <code>Advanced Project Settings</code>, then Adding the following details:</p>
+<li>Create a new Unity Project</li>
+<li>Switch to the <code>UWP</code> platform in <code>Build Settings</code></li>
+<li>Setup the Legacy XR settings in &quot;Edit -&gt; Project Settings -&gt; Player -&gt; XR Settings&quot; for <code>Windows Mixed Reality</code> to the <code>UWP</code> platform</li>
+<li>Add the XRTK UPM registry to Unity by Opening the Unity Package Manager (<code>Window -&gt; Package manager</code>), selecting the <code>Advanced</code> drop down and clicking on <code>Advanced Project Settings</code>, then Adding the following details:
 <blockquote>
 <p>Name: XRTK</p>
 <p>URL: <a href="http://upm.xrtk.io:4873">http://upm.xrtk.io:4873</a></p>
 <p>Scope(s): com.xrtk</p>
 </blockquote>
 </li>
-<li><p>Return to the Unity Package manager and select <code>My Registries</code> in the Sources) dropdown (next to the <code>+</code> symbol)</p>
-</li>
-<li><p>Select the <code>XRTK.SDK</code> and click <code>Install</code></p>
-</li>
-<li><p>Install the <code>XRTK.WindowsMixedReality</code> platform</p>
-</li>
-<li><p>When prompted, install the Windows Mixed Reality platform configuration in to your current project</p>
-</li>
-<li><p>Close the Unity Package Manager and return to your scene</p>
-</li>
-<li><p>Select or create the scene you want to create Mixed Reality Content in</p>
-</li>
-<li><p>Select <code>Mixed Reality Toolkit -&gt; Configure</code> in the Unity Menu. THis will update your scene and add the MixedRealityToolkit instance.</p>
-</li>
+<li>Return to the Unity Package manager and select <code>My Registries</code> in the Sources) dropdown (next to the <code>+</code> symbol)</li>
+<li>Select the <code>XRTK.SDK</code> and click <code>Install</code></li>
+<li>Install the <code>XRTK.WindowsMixedReality</code> platform</li>
+<li>When prompted, install the Windows Mixed Reality platform configuration in to your current project</li>
+<li>Close the Unity Package Manager and return to your scene</li>
+<li>Select or create the scene you want to create Mixed Reality Content in</li>
+<li>Select <code>Mixed Reality Toolkit -&gt; Configure</code> in the Unity Menu. This will update your scene and add the MixedRealityToolkit instance.</li>
+<li>Enable the <code>WindowsMixedReality</code> XR Loader in the XR SDK Manager</li>
 </ol>
-<p>Provided you have configured the Legacy XR settings for each platform correctly, the project will run.</p>
 <p>For Windows 10</p>
 <ul>
 <li>Ensure the Mixed Reality Portal is running before playing</li>
@@ -138,7 +128,7 @@
 </ul>
 <p>For HoloLens 1 / 2</p>
 <ul>
-<li>Ensure you have correctly setup the Device portal on the device and it is accessbile</li>
+<li>Ensure you have correctly setup the Device portal on the device and it is accessible</li>
 <li>For builds, you will need to open the Visual Studio project and package the solution for HoloLens</li>
 </ul>
 <hr>

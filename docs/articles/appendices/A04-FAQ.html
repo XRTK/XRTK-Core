@@ -77,33 +77,23 @@
 <p>We recommend walking through the <a href="../00-GettingStarted.html">Getting Started Guide</a> for a detailed understanding to get up and running.</p>
 <p>However, here is the TL;DR short version:</p>
 <ol>
-<li><p>Create a new Unity Project</p>
-</li>
-<li><p>Setup the Legacy XR settings in &quot;Edit -&gt; Project Settings -&gt; Player -&gt; XR Settings&quot; for your current and any other platforms you want to run on</p>
-</li>
-<li><p>Add the XRTK UPM registry to Unity by Opening the Unity Package Manager (<code>Window -&gt; Package manager</code>), selecting the <code>Advanced</code> drop down and clicking on <code>Advanced Project Settings</code>, then Adding the following details:</p>
+<li>Create a new Unity Project</li>
+<li>Setup the Legacy XR settings in &quot;Edit -&gt; Project Settings -&gt; Player -&gt; XR Settings&quot; for your current and any other platforms you want to run on</li>
+<li>Add the XRTK UPM registry to Unity by Opening the Unity Package Manager (<code>Window -&gt; Package manager</code>), selecting the <code>Advanced</code> drop down and clicking on <code>Advanced Project Settings</code>, then Adding the following details:
 <blockquote>
 <p>Name: XRTK</p>
 <p>URL: <a href="http://upm.xrtk.io:4873">http://upm.xrtk.io:4873</a></p>
 <p>Scope(s): com.xrtk</p>
 </blockquote>
 </li>
-<li><p>Return to the Unity Package manager and select <code>My Registries</code> in the Sources) dropdown (next to the <code>+</code> symbol)</p>
-</li>
-<li><p>Select the XRTK.SDK and click Install</p>
-</li>
-<li><p>Close the Unity Package Manager and return to your scene</p>
-</li>
-<li><p>Select or create the scene you want to create Mixed Reality Content in</p>
-</li>
-<li><p>Select <code>Mixed Reality Toolkit -&gt; Configure</code> in the Unity Menu. THis will update your scene and add the MixedRealityToolkit instance.</p>
-</li>
-<li><p>Done, you can now run your project for Windows Standalone</p>
-</li>
-<li><p>If you wish, you can install additional platforms, such as Oculus or Windows Mixed Reality from the Package Manager. once installed they will prompt to install their platform configuration in to your project (ENSURE that you have your Mixed Reality Scene open)</p>
-</li>
-<li><p>Provided you have configured the Legacy XR settings for each platform correctly, the project will run</p>
-</li>
+<li>Return to the Unity Package manager and select <code>My Registries</code> in the Sources) dropdown (next to the <code>+</code> symbol)</li>
+<li>Select the XRTK.SDK and click Install</li>
+<li>Close the Unity Package Manager and return to your scene</li>
+<li>Select or create the scene you want to create Mixed Reality Content in</li>
+<li>Select <code>Mixed Reality Toolkit -&gt; Configure</code> in the Unity Menu. THis will update your scene and add the MixedRealityToolkit instance.</li>
+<li>Done, you can now run your project for Windows Standalone</li>
+<li>If you wish, you can install additional platforms, such as Oculus or Windows Mixed Reality from the Package Manager. once installed they will prompt to install their platform configuration in to your project (ENSURE that you have your Mixed Reality Scene open)</li>
+<li>Provided you have configured the XR SDK settings for each platform correctly, the project will run</li>
 </ol>
 <h2 id="3-what-do-i-need-to-configure-to-make-my-mixed-reality-project-run">3. What do I need to configure to make my Mixed Reality Project run?</h2>
 <p>In short NONE, Once you import the default configuration, then the project will be available to run on any of the supported platforms, the only exceptions are:</p>
@@ -118,8 +108,8 @@
 <p>The Default Camera system installed with the SDK should cover Windows Standalone and most other platforms, however check that its <code>Runtime Platforms</code> is configured correctly (and is present)</p>
 <p><img src="../../images/FAQ/DefaultCameraSettings.png" alt="Default Camera Settings"></p>
 <p>Other platforms will install their own Camera Systems as required.</p>
-<h2 id="6-i-cannot-click-on-my-object-in-the-scene">6. I cannot click on my object in the scene.</h2>
-<p>For any object to he <code>Interactable</code> in a Mixed Reality scene, it must:</p>
+<h2 id="6-i-cannot-click-on-my-object-in-the-scene">6. I cannot click on my object in the scene</h2>
+<p>For any object to be <code>Interactable</code> in a Mixed Reality scene, it must:</p>
 <ul>
 <li>Have been registered with the <code>InputSystem</code> as a tracked object using
 <pre><code class="lang-csharp">    MixedRealityToolkit.InputSystem.Register(gameObject);
@@ -128,7 +118,7 @@ The XRTK provides a handy base class called <code>BaseInputHandler</code> for tr
 <li>Have a collider component added and configured relative to the objects dimensions.
 If you are using <code>Physics Layers</code>, then ensure the layers used for your objects match those in the Input System configuration</li>
 </ul>
-<h2 id="7-when-i-interact-with-an-object-all-my-scripts-are-firing-but-i-only-want-one-to">7. WHen I interact with an object all my scripts are firing, but I only want one to.</h2>
+<h2 id="7-when-i-interact-with-an-object-all-my-scripts-are-firing-but-i-only-want-one-to">7. WHen I interact with an object all my scripts are firing, but I only want one to</h2>
 <p>The Input System events have a concept called <code>Used</code>, this allows for scenarios where you want multiple scripts to receive an event and control when the chain of events to end. If you want any object to stop and event from propagating then you simply need to handle the <code>Used</code> property.</p>
 <blockquote>
 <p>You should also check if an event is already used in your scripts before executing them.</p>

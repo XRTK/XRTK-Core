@@ -88,7 +88,7 @@
 <p>To get started with the Mixed Reality Toolkit you will need:</p>
 <ul>
 <li><a href="https://visualstudio.microsoft.com/downloads/">Visual Studio 2019+ (Community or full)</a></li>
-<li><a href="https://unity3d.com/get-unity/download/archive">Unity 2019.4+</a></li>
+<li><a href="https://unity3d.com/get-unity/download/archive">Unity 2019.4+ LTS</a></li>
 <li><a href="01-DownloadingTheXRTK.html">Latest XRTK release</a></li>
 </ul>
 <blockquote>
@@ -112,11 +112,10 @@
 <hr>
 <h2 id="adding-the-mixed-reality-toolkit-to-your-project">Adding the Mixed Reality Toolkit to your project</h2>
 <p>First download the Mixed Reality Toolkit via one of the <a href="01-DownloadingTheXRTK.html">delivery mechanisms</a> into your Unity project.</p>
-<p>Our preferred deployment approach is to use the <a href="01-DownloadingTheXRTK.html#register-upm-server-in-project-settings">Unity Package Manager</a>.  This is the quickest and safest way to get Mixed Reality Toolkit in your solution and provides new releases as soon as they are published. Using UPM, there are also no asset conflicts in your Unity project.</p>
+<p>Our preferred deployment approach is to install using the <a href="01-DownloadingTheXRTK.html#register-upm-server-in-project-settings">Unity Package Manager</a>.  This is the quickest and safest way to get Mixed Reality Toolkit in your solution and provides new releases as soon as they are published. Using UPM, there are also no asset conflicts in your Unity project.</p>
 <blockquote>
 <p><strong>Note:</strong> Some prefabs and assets require TextMesh Pro, meaning you have to have the TextMesh Pro package installed and the assets in your project <code>Window -&gt; TextMeshPro -&gt; Import TMP Essential Resources</code>.</p>
 </blockquote>
-<p>Simply follow along with the UPM Installation instructions detailed in the <a href="01-DownloadingTheXRTK.html">Downloading the XRTK</a> guide to add the XRTK scoped registry and install the relevant packages.</p>
 <h3 id="it-all-starts-with-the-sdk">It all starts with the SDK</h3>
 <p>We recommend installing the <strong>XRTK.SDK</strong> first to ensure you have the smoothest setup with the XRTK, which also gives you access to the Quickstart configurations.</p>
 <hr>
@@ -163,16 +162,14 @@
 <hr>
 <h2 id="build-and-play">Build and Play</h2>
 <p>You are now ready to start building your Mixed Reality Solution, just start adding content and get building!</p>
-<p>You will need to enable the Unity Legacy XR system for each platform (<code>Edit -&gt; Project Settings -&gt; XR Settings</code>) as appropriate:</p>
-<p><img src="../images/GettingStarted/UnityLegacyXRSettings.png" alt="Unity XR Settings"></p>
+<p>You will need to enable the Unity XR SDK Loaders in the project settings to be able to launch the application in XR Mode for each respective platform.</p>
+<p><img src="../images/GettingStarted/XR_SDK_Manager.png" alt="XR SDK Manager"></p>
 <blockquote>
-<p>The new Unity XR Management system does work with the XRTK, and there could be unforseen issues if both are in the project at the same time.  the XRTK talks natively with each platform to improve performance and reduce overhead.</p>
+<p><strong>Note:</strong> Where possible use the Mock HMD Loader, as the XRTK already talks directly to the native apis. We only need the XR SDK display subsystems to get the XR Mode to correctly render to the screen.</p>
 </blockquote>
 <p>Once you are ready to build, open the Unity Build settings, and switch to the target platform you wish to build on, then open the Mixed Reality Toolkit's build window and build from there.</p>
 <blockquote>
 <p><strong>Note:</strong> Depending on the platform's simulation support, you should be able to run in the editor by pressing play.</p>
-</blockquote>
-<blockquote>
 <p>Please check the <a href="appendices/A04-FAQ.html">FAQ</a> for any difficulties.</p>
 </blockquote>
 <h3 id="building-for-windows-standalone-openvroculus-rift-link">Building for Windows Standalone (OpenVR/Oculus Rift-Link)</h3>

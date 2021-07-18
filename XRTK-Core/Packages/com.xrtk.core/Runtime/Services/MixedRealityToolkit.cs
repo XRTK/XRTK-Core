@@ -490,7 +490,9 @@ namespace XRTK.Services
 
                 if (platform.IsAvailable
 #if UNITY_EDITOR
-                    || platform.IsBuildTargetAvailable
+                    || platform.IsBuildTargetAvailable &&
+                    TypeExtensions.TryResolveType(UnityEditor.EditorPrefs.GetString("CurrentPlatformTarget", string.Empty), out var resolvedPlatform) &&
+                    resolvedPlatform == platformType
 #endif
                 )
                 {

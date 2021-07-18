@@ -30,6 +30,7 @@ using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading;
 using UnityEngine;
+using XRTK.Extensions;
 using XRTK.Services;
 using XRTK.Utilities.Async.AwaitYieldInstructions;
 using XRTK.Utilities.Async.Internal;
@@ -44,50 +45,34 @@ namespace XRTK.Utilities.Async
     /// </summary>
     public static class AwaiterExtensions
     {
+        private class CoroutineRunner : MonoBehaviour { }
+
         public static SimpleCoroutineAwaiter GetAwaiter(this WaitForSeconds instruction)
-        {
-            return GetAwaiterReturnVoid(instruction);
-        }
+            => GetAwaiterReturnVoid(instruction);
 
         public static SimpleCoroutineAwaiter GetAwaiter(this UnityMainThread instruction)
-        {
-            return GetAwaiterReturnVoid(instruction);
-        }
+            => GetAwaiterReturnVoid(instruction);
 
         public static SimpleCoroutineAwaiter GetAwaiter(this BackgroundThread instruction)
-        {
-            return GetAwaiterReturnVoid(instruction);
-        }
+            => GetAwaiterReturnVoid(instruction);
 
         public static SimpleCoroutineAwaiter GetAwaiter(this WaitForEndOfFrame instruction)
-        {
-            return GetAwaiterReturnVoid(instruction);
-        }
+            => GetAwaiterReturnVoid(instruction);
 
         public static SimpleCoroutineAwaiter GetAwaiter(this WaitForFixedUpdate instruction)
-        {
-            return GetAwaiterReturnVoid(instruction);
-        }
+            => GetAwaiterReturnVoid(instruction);
 
         public static SimpleCoroutineAwaiter GetAwaiter(this WaitForSecondsRealtime instruction)
-        {
-            return GetAwaiterReturnVoid(instruction);
-        }
+            => GetAwaiterReturnVoid(instruction);
 
         public static SimpleCoroutineAwaiter GetAwaiter(this WaitUntil instruction)
-        {
-            return GetAwaiterReturnVoid(instruction);
-        }
+            => GetAwaiterReturnVoid(instruction);
 
         public static SimpleCoroutineAwaiter GetAwaiter(this WaitWhile instruction)
-        {
-            return GetAwaiterReturnVoid(instruction);
-        }
+            => GetAwaiterReturnVoid(instruction);
 
         public static SimpleCoroutineAwaiter<AsyncOperation> GetAwaiter(this AsyncOperation instruction)
-        {
-            return GetAwaiterReturnSelf(instruction);
-        }
+            => GetAwaiterReturnSelf(instruction);
 
         public static SimpleCoroutineAwaiter<Object> GetAwaiter(this ResourceRequest instruction)
         {
@@ -147,8 +132,43 @@ namespace XRTK.Utilities.Async
 
         private static void RunCoroutine(IEnumerator enumerator)
         {
-            MixedRealityToolkit.Instance.StartCoroutine(enumerator);
+            if (Application.isPlaying)
+            {
+                if (coroutineRunner.IsNull())
+                {
+                    if (MixedRealityToolkit.IsInitialized)
+                    {
+                        coroutineRunner = MixedRealityToolkit.Instance;
+                    }
+                    else
+                    {
+                        GameObject go = GameObject.Find(nameof(CoroutineRunner));
+
+                        if (go.IsNull())
+                        {
+                            go = new GameObject(nameof(CoroutineRunner));
+                        }
+
+                        go.DontDestroyOnLoad();
+                        go.hideFlags = HideFlags.HideAndDontSave;
+                        coroutineRunner = go.EnsureComponent<CoroutineRunner>();
+                    }
+                }
+
+                coroutineRunner.Validate();
+                coroutineRunner.StartCoroutine(enumerator);
+            }
+            else
+            {
+#if UNITY_EDITOR
+                Unity.EditorCoroutines.Editor.EditorCoroutineUtility.StartCoroutineOwnerless(enumerator);
+#else
+                throw new Exception(nameof(CoroutineRunner));
+#endif
+            }
         }
+
+        private static MonoBehaviour coroutineRunner;
 
         private static void RunOnUnityScheduler(Action action)
         {

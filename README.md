@@ -1,6 +1,6 @@
 # Welcome to the Mixed Reality Toolkit
 
-![The Mixed Reality Toolkit](images/Branding/XRTK_Logo_1200x250.png)
+![The Mixed Reality Toolkit](https://raw.githubusercontent.com/XRTK/XRTK-Core/development/images/Branding/XRTK_Logo_1200x250.png)
 
 The Mixed Reality Toolkit's primary focus is to make it extremely easy to get started creating Mixed Reality applications and to accelerate deployment to multiple platforms from the same Unity project.
 
@@ -13,12 +13,8 @@ The Mixed Reality Toolkit's primary focus is to make it extremely easy to get st
 |XRTK-Core|[![Build Status](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_apis/build/status/com.xrtk.core?branchName=master)](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_build/latest?definitionId=44&branchName=master)|[![openupm](https://img.shields.io/npm/v/com.xrtk.core?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.xrtk.core/)|
 |[SDK](https://github.com/XRTK/SDK)|[![Build Status](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_apis/build/status/com.xrtk.sdk?branchName=master)](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_build/latest?definitionId=50&branchName=master)|[![openupm](https://img.shields.io/npm/v/com.xrtk.sdk?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.xrtk.sdk/)|
 |[ARCore](https://github.com/XRTK/ARCore)|[![Build Status](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_apis/build/status/com.xrtk.arcore?branchName=master)](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_build/latest?definitionId=56&branchName=master)|[![openupm](https://img.shields.io/npm/v/com.xrtk.arcore?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.xrtk.arcore/)|
-|[Etee](https://github.com/XRTK/Etee)|[![Build Status](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_apis/build/status/com.xrtk.etee?branchName=master)](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_build/latest?definitionId=54&branchName=master)|[![openupm](https://img.shields.io/npm/v/com.xrtk.etee?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.xrtk.etee/)|
-|[Lenovo](https://github.com/XRTK/Lenovo)|[![Build Status](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_apis/build/status/com.xrtk.lenovo?branchName=master)](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_build/latest?definitionId=53&branchName=master)|[![openupm](https://img.shields.io/npm/v/com.xrtk.lenovo?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.xrtk.lenovo/)|
 |[Lumin](https://github.com/XRTK/Lumin)|[![Build Status](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_apis/build/status/com.xrtk.lumin?branchName=master)](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_build/latest?definitionId=47&branchName=master)|[![openupm](https://img.shields.io/npm/v/com.xrtk.lumin?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.xrtk.lumin/)|
-|[Nreal](https://github.com/XRTK/Nreal)|[![Build Status](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_apis/build/status/com.xrtk.nreal?branchName=master)](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_build/latest?definitionId=52&branchName=master)|[![openupm](https://img.shields.io/npm/v/com.xrtk.nreal?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.xrtk.nreal/)|
 |[Oculus](https://github.com/XRTK/Oculus)|[![Build Status](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_apis/build/status/com.xrtk.oculus?branchName=master)](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_build/latest?definitionId=48&branchName=master)|[![openupm](https://img.shields.io/npm/v/com.xrtk.oculus?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.xrtk.oculus/)|
-|[SteamVR](https://github.com/XRTK/SteamVR)|[![Build Status](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_apis/build/status/com.xrtk.steamvr?branchName=master)](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_build/latest?definitionId=55&branchName=master)|[![openupm](https://img.shields.io/npm/v/com.xrtk.steamvr?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.xrtk.steamvr/)|
 |[Ultraleap](https://github.com/XRTK/Ultraleap)|[![Build Status](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_apis/build/status/com.xrtk.ultraleap?branchName=master)](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_build/latest?definitionId=51&branchName=master)|[![openupm](https://img.shields.io/npm/v/com.xrtk.ultraleap?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.xrtk.ultraleap/)|
 |[Windows Mixed Reality](https://github.com/XRTK/WindowsMixedReality)|[![Build Status](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_apis/build/status/com.xrtk.wmr?branchName=master)](https://dev.azure.com/xrtk/Mixed%20Reality%20Toolkit/_build/latest?definitionId=49&branchName=master)|[![openupm](https://img.shields.io/npm/v/com.xrtk.wmr?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.xrtk.wmr/)|
 
@@ -59,7 +55,7 @@ The XRTK is an MIT-licensed open source project with its ongoing development mad
 
 |Sponsors||
 |---|---|
-|<a href="https://www.vimaec.com/">![[VIM](https://www.vimaec.com/)](/images/Sponsors/vim_logo.jpg)</a>|VIM provides a universal format for fast BIM access for large and complex projects in the AEC industry.|
+|<a href="https://www.vimaec.com/">![[VIM](https://www.vimaec.com/)](https://raw.githubusercontent.com/XRTK/XRTK-Core/development/images/Sponsors/vim_logo.jpg)</a>|VIM provides a universal format for fast BIM access for large and complex projects in the AEC industry.|
 
 We use the donations for continuous active development by core team members, web hosting, and licensing costs for build tools and infrastructure.
 
@@ -69,16 +65,16 @@ A major component of the Mixed Reality Toolkit is the Platform definitions that 
 
 ## Current Platforms
 
-* OpenVR - Default runtime platform for Windows Standalone, no special consideration.
-* [Oculus](articles/platforms/oculus.md)
-* [Windows Mixed Reality (UWP)](articles/platforms/windowsmixedreality.md)
-* [Magic Leap (Lumin)](articles/platforms/magicleap.md)
+- [Magic Leap (Lumin)](articles/platforms/magicleap.md)
+- [Oculus](articles/platforms/oculus.md)
+- OpenVR - Default runtime platform for Windows Standalone, no special consideration.
+- [Ultraleap](articles/platforms/ultraleap.md)
+- [Windows Mixed Reality (UWP)](articles/platforms/windowsmixedreality.md)
 
 ## In development
 
-* [SteamVR](articles/platforms/steamvr.md)
-* [etee](articles/platforms/etee.md)
-* [Ultraleap](articles/platforms/ultraleap.md)
-* [WebXR](articles/platforms/webxr.md)
+- [SteamVR](articles/platforms/steamvr.md)
+- [etee](articles/platforms/etee.md)
+- [WebXR](articles/platforms/webxr.md)
 
 > Want to add a platform? Check out our new [Template Generator](articles/03-template-generator.md#platform-template-generation)!

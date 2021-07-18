@@ -151,7 +151,7 @@ namespace XRTK.Editor.Utilities
         /// </summary>
         public static void RenderMixedRealityToolkitLogo()
         {
-            RenderInspectorHeader(EditorGUIUtility.isProSkin ? LightThemeLogo : DarkThemeLogo);
+            RenderInspectorHeader(EditorGUIUtility.isProSkin ? DarkThemeLogo : LightThemeLogo);
         }
 
         /// <summary>

@@ -37,13 +37,11 @@ The following capabilities are not currently available or are in development
 1. Create a new Unity Project
 2. Setup the Legacy XR settings in "Edit -> Project Settings -> Player -> XR Settings" for `Oculus` to the Windows Standalone and Android platforms
 3. Add the XRTK UPM registry to Unity by Opening the Unity Package Manager (`Window -> Package manager`), selecting the `Advanced` drop down and clicking on `Advanced Project Settings`, then Adding the following details:
-
     > Name: XRTK
     >
     > URL: http://upm.xrtk.io:4873
     >
     > Scope(s): com.xrtk
-
 4. Return to the Unity Package manager and select `My Registries` in the Sources) dropdown (next to the `+` symbol)
 5. Select the `XRTK.SDK` and click `Install`
 6. Install the `XRTK.Oculus` platform
@@ -52,8 +50,7 @@ The following capabilities are not currently available or are in development
 9. Select or create the scene you want to create Mixed Reality Content in
 10. Select `Mixed Reality Toolkit -> Configure` in the Unity Menu. THis will update your scene and add the MixedRealityToolkit instance.
 11. Install an Android Manifest in to your project using `Mixed Reality Toolkit -> Tools -> Oculus -> Create Oculus Quest compatible AndroidManifest.xml` in the Editor menu
-
-Provided you have configured the Legacy XR settings for each platform correctly, the project will run.
+12. Enable the `Mock HMD` XR Loader in the XR SDK Manager
 
 For Oculus Rift / Quest
 

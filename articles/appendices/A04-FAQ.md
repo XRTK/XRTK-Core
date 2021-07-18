@@ -17,13 +17,11 @@ However, here is the TL;DR short version:
 1. Create a new Unity Project
 2. Setup the Legacy XR settings in "Edit -> Project Settings -> Player -> XR Settings" for your current and any other platforms you want to run on
 3. Add the XRTK UPM registry to Unity by Opening the Unity Package Manager (`Window -> Package manager`), selecting the `Advanced` drop down and clicking on `Advanced Project Settings`, then Adding the following details:
-
     > Name: XRTK
     >
     > URL: http://upm.xrtk.io:4873
     >
     > Scope(s): com.xrtk
-
 4. Return to the Unity Package manager and select `My Registries` in the Sources) dropdown (next to the `+` symbol)
 5. Select the XRTK.SDK and click Install
 6. Close the Unity Package Manager and return to your scene
@@ -31,7 +29,7 @@ However, here is the TL;DR short version:
 8. Select `Mixed Reality Toolkit -> Configure` in the Unity Menu. THis will update your scene and add the MixedRealityToolkit instance.
 9. Done, you can now run your project for Windows Standalone
 10. If you wish, you can install additional platforms, such as Oculus or Windows Mixed Reality from the Package Manager. once installed they will prompt to install their platform configuration in to your project (ENSURE that you have your Mixed Reality Scene open)
-11. Provided you have configured the Legacy XR settings for each platform correctly, the project will run
+11. Provided you have configured the XR SDK settings for each platform correctly, the project will run
 
 ## 3. What do I need to configure to make my Mixed Reality Project run?
 
@@ -54,9 +52,9 @@ The Default Camera system installed with the SDK should cover Windows Standalone
 
 Other platforms will install their own Camera Systems as required.
 
-## 6. I cannot click on my object in the scene.
+## 6. I cannot click on my object in the scene
 
-For any object to he `Interactable` in a Mixed Reality scene, it must:
+For any object to be `Interactable` in a Mixed Reality scene, it must:
 
 * Have been registered with the `InputSystem` as a tracked object using
     ```csharp
@@ -66,7 +64,7 @@ For any object to he `Interactable` in a Mixed Reality scene, it must:
 * Have a collider component added and configured relative to the objects dimensions.
     If you are using `Physics Layers`, then ensure the layers used for your objects match those in the Input System configuration
 
-## 7. WHen I interact with an object all my scripts are firing, but I only want one to.
+## 7. WHen I interact with an object all my scripts are firing, but I only want one to
 
 The Input System events have a concept called `Used`, this allows for scenarios where you want multiple scripts to receive an event and control when the chain of events to end. If you want any object to stop and event from propagating then you simply need to handle the `Used` property.
 

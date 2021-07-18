@@ -53,8 +53,6 @@ namespace XRTK.Editor.Profiles.InputSystem.Controllers
 
             serializedObject.Update();
 
-            EditorGUILayout.Space();
-
             showHandTrackingSettings = EditorGUILayoutExtensions.FoldoutWithBoldLabel(showHandTrackingSettings, handTrackingSettingsFoldoutHeader);
 
             if (showHandTrackingSettings)

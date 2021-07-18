@@ -11,3 +11,6 @@ apiRules:
 - exclude:
     uidRegex: ^LeapInternal.+
     type: Namespace
+- exclude:
+    uidRegex: ^LeapMotion.+
+    type: Namespace

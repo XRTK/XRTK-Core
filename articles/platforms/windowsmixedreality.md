@@ -25,7 +25,6 @@ For HoloLens development:
 * For OpenVR on Windows Mixed Reality, you simply need to ensure that `OpenVR` is one of the configured platforms in the Unity legacy XR settings for the `Standalone` platform
 * For Windows Mixed Reality on UWP, you simply need to ensure that `Windows Mixed Reality` is one of the configured platforms in the Unity legacy XR settings for the `UWP` platform. This is also required for HoloLens development.
 
-
 ## Capabilities
 
 The following capabilities are currently available for the Windows Mixed Reality platform
@@ -42,22 +41,19 @@ The following capabilities are currently available for the Windows Mixed Reality
 2. Switch to the `UWP` platform in `Build Settings`
 3. Setup the Legacy XR settings in "Edit -> Project Settings -> Player -> XR Settings" for `Windows Mixed Reality` to the `UWP` platform
 4. Add the XRTK UPM registry to Unity by Opening the Unity Package Manager (`Window -> Package manager`), selecting the `Advanced` drop down and clicking on `Advanced Project Settings`, then Adding the following details:
-
     > Name: XRTK
     >
     > URL: http://upm.xrtk.io:4873
     >
     > Scope(s): com.xrtk
-
 5. Return to the Unity Package manager and select `My Registries` in the Sources) dropdown (next to the `+` symbol)
 6. Select the `XRTK.SDK` and click `Install`
 7. Install the `XRTK.WindowsMixedReality` platform
 8. When prompted, install the Windows Mixed Reality platform configuration in to your current project
 9. Close the Unity Package Manager and return to your scene
 10. Select or create the scene you want to create Mixed Reality Content in
-12. Select `Mixed Reality Toolkit -> Configure` in the Unity Menu. THis will update your scene and add the MixedRealityToolkit instance.
-
-Provided you have configured the Legacy XR settings for each platform correctly, the project will run.
+11. Select `Mixed Reality Toolkit -> Configure` in the Unity Menu. This will update your scene and add the MixedRealityToolkit instance.
+12. Enable the `WindowsMixedReality` XR Loader in the XR SDK Manager
 
 For Windows 10
 
@@ -66,7 +62,7 @@ For Windows 10
 
 For HoloLens 1 / 2
 
-* Ensure you have correctly setup the Device portal on the device and it is accessbile
+* Ensure you have correctly setup the Device portal on the device and it is accessible
 * For builds, you will need to open the Visual Studio project and package the solution for HoloLens
 
 ---

@@ -1,0 +1,458 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class UltraleapHandControllerDataProvider
+   | XRTK-Core </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class UltraleapHandControllerDataProvider
+   | XRTK-Core ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider">
+  
+  
+  <h1 id="XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider" data-uid="XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider" class="text-break">Class UltraleapHandControllerDataProvider
+  </h1>
+  <div class="markdown level0 summary"><p>Enables the XRTK hand tracking implementation to run powered by Ultraleap hand tracking
+sensors, like e.g. the Leap Motion device, by providing <a class="xref" href="XRTK.Definitions.Controllers.Hands.HandData.html">HandData</a> to the
+<a class="xref" href="XRTK.Providers.Controllers.Hands.MixedRealityHandController.html">MixedRealityHandController</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="XRTK.Services.BaseService.html">BaseService</a></div>
+    <div class="level2"><a class="xref" href="XRTK.Services.BaseServiceWithConstructor.html">BaseServiceWithConstructor</a></div>
+    <div class="level3"><a class="xref" href="XRTK.Services.BaseDataProvider.html">BaseDataProvider</a></div>
+    <div class="level4"><a class="xref" href="XRTK.Providers.Controllers.BaseControllerDataProvider.html">BaseControllerDataProvider</a></div>
+    <div class="level5"><a class="xref" href="XRTK.Providers.Controllers.Hands.BaseHandControllerDataProvider.html">BaseHandControllerDataProvider</a></div>
+    <div class="level6"><span class="xref">UltraleapHandControllerDataProvider</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="XRTK.Interfaces.Providers.Controllers.Hands.IMixedRealityHandControllerDataProvider.html">IMixedRealityHandControllerDataProvider</a></div>
+    <div><a class="xref" href="XRTK.Interfaces.Providers.Controllers.IMixedRealityControllerDataProvider.html">IMixedRealityControllerDataProvider</a></div>
+    <div><a class="xref" href="XRTK.Interfaces.Providers.IMixedRealityInputDataProvider.html">IMixedRealityInputDataProvider</a></div>
+    <div><a class="xref" href="XRTK.Interfaces.IMixedRealityDataProvider.html">IMixedRealityDataProvider</a></div>
+    <div><a class="xref" href="XRTK.Interfaces.IMixedRealityService.html">IMixedRealityService</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.Hands.BaseHandControllerDataProvider.html#XRTK_Providers_Controllers_Hands_BaseHandControllerDataProvider_RenderingMode">BaseHandControllerDataProvider.RenderingMode</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.Hands.BaseHandControllerDataProvider.html#XRTK_Providers_Controllers_Hands_BaseHandControllerDataProvider_HandPhysicsEnabled">BaseHandControllerDataProvider.HandPhysicsEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.Hands.BaseHandControllerDataProvider.html#XRTK_Providers_Controllers_Hands_BaseHandControllerDataProvider_UseTriggers">BaseHandControllerDataProvider.UseTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.Hands.BaseHandControllerDataProvider.html#XRTK_Providers_Controllers_Hands_BaseHandControllerDataProvider_BoundsMode">BaseHandControllerDataProvider.BoundsMode</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.Hands.BaseHandControllerDataProvider.html#XRTK_Providers_Controllers_Hands_BaseHandControllerDataProvider_TrackedPoses">BaseHandControllerDataProvider.TrackedPoses</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.BaseControllerDataProvider.html#XRTK_Providers_Controllers_BaseControllerDataProvider_InputSystem">BaseControllerDataProvider.InputSystem</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.BaseControllerDataProvider.html#XRTK_Providers_Controllers_BaseControllerDataProvider_ActiveControllers">BaseControllerDataProvider.ActiveControllers</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.BaseControllerDataProvider.html#XRTK_Providers_Controllers_BaseControllerDataProvider_GetControllerMappingProfile_System_Type_XRTK_Definitions_Utilities_Handedness_">BaseControllerDataProvider.GetControllerMappingProfile(Type, Handedness)</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.BaseControllerDataProvider.html#XRTK_Providers_Controllers_BaseControllerDataProvider_AddController_XRTK_Interfaces_Providers_Controllers_IMixedRealityController_">BaseControllerDataProvider.AddController(IMixedRealityController)</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.BaseControllerDataProvider.html#XRTK_Providers_Controllers_BaseControllerDataProvider_RemoveController_XRTK_Interfaces_Providers_Controllers_IMixedRealityController_">BaseControllerDataProvider.RemoveController(IMixedRealityController)</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Services.BaseDataProvider.html#XRTK_Services_BaseDataProvider_ParentService">BaseDataProvider.ParentService</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Services.BaseDataProvider.html#XRTK_Services_BaseDataProvider_Priority">BaseDataProvider.Priority</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Services.BaseServiceWithConstructor.html#XRTK_Services_BaseServiceWithConstructor_Name">BaseServiceWithConstructor.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_Initialize">BaseService.Initialize()</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_Reset">BaseService.Reset()</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_LateUpdate">BaseService.LateUpdate()</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_OnApplicationFocus_System_Boolean_">BaseService.OnApplicationFocus(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_OnApplicationPause_System_Boolean_">BaseService.OnApplicationPause(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_Dispose">BaseService.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_OnDispose_System_Boolean_">BaseService.OnDispose(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="XRTK.Ultraleap.Providers.Controllers.html">XRTK.Ultraleap.Providers.Controllers</a></h6>
+  <h6><strong>Assembly</strong>: XRTK.Ultraleap.dll</h6>
+  <h5 id="XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RuntimePlatform(typeof(UniversalWindowsPlatform))]
+[RuntimePlatform(typeof(WindowsStandalonePlatform))]
+[Guid(&quot;61cec407-ffa4-4a5c-b96a-5229348f85c2&quot;)]
+public class UltraleapHandControllerDataProvider : BaseHandControllerDataProvider, IMixedRealityHandControllerDataProvider, IMixedRealityControllerDataProvider, IMixedRealityInputDataProvider, IMixedRealityDataProvider, IMixedRealityService, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider__ctor_System_String_System_UInt32_XRTK_Ultraleap_Profiles_UltraleapHandControllerDataProviderProfile_XRTK_Interfaces_InputSystem_IMixedRealityInputSystem_.md&amp;value=---%0Auid%3A%20XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.%23ctor(System.String%2CSystem.UInt32%2CXRTK.Ultraleap.Profiles.UltraleapHandControllerDataProviderProfile%2CXRTK.Interfaces.InputSystem.IMixedRealityInputSystem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.ultraleap/Runtime/Providers/Controllers/UltraleapHandControllerDataProvider.cs/#L37">View Source</a>
+  </span>
+  <a id="XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider__ctor_" data-uid="XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.#ctor*"></a>
+  <h4 id="XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider__ctor_System_String_System_UInt32_XRTK_Ultraleap_Profiles_UltraleapHandControllerDataProviderProfile_XRTK_Interfaces_InputSystem_IMixedRealityInputSystem_" data-uid="XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.#ctor(System.String,System.UInt32,XRTK.Ultraleap.Profiles.UltraleapHandControllerDataProviderProfile,XRTK.Interfaces.InputSystem.IMixedRealityInputSystem)">UltraleapHandControllerDataProvider(String, UInt32, UltraleapHandControllerDataProviderProfile, IMixedRealityInputSystem)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UltraleapHandControllerDataProvider(string name, uint priority, UltraleapHandControllerDataProviderProfile profile, IMixedRealityInputSystem parentService)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td><span class="parametername">priority</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XRTK.Ultraleap.Profiles.UltraleapHandControllerDataProviderProfile.html">UltraleapHandControllerDataProviderProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XRTK.Interfaces.InputSystem.IMixedRealityInputSystem.html">IMixedRealityInputSystem</a></td>
+        <td><span class="parametername">parentService</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_Destroy.md&amp;value=---%0Auid%3A%20XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.Destroy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.ultraleap/Runtime/Providers/Controllers/UltraleapHandControllerDataProvider.cs/#L255">View Source</a>
+  </span>
+  <a id="XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_Destroy_" data-uid="XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.Destroy*"></a>
+  <h4 id="XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_Destroy" data-uid="XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.Destroy">Destroy()</h4>
+  <div class="markdown level1 summary"><p>Optional Destroy function to perform cleanup of the service before the Mixed Reality Toolkit is destroyed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Destroy()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_Destroy">BaseService.Destroy()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_Disable.md&amp;value=---%0Auid%3A%20XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.Disable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.ultraleap/Runtime/Providers/Controllers/UltraleapHandControllerDataProvider.cs/#L227">View Source</a>
+  </span>
+  <a id="XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_Disable_" data-uid="XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.Disable*"></a>
+  <h4 id="XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_Disable" data-uid="XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.Disable">Disable()</h4>
+  <div class="markdown level1 summary"><p>Optional Disable function to pause the service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Disable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_Disable">BaseService.Disable()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_Enable.md&amp;value=---%0Auid%3A%20XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.Enable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.ultraleap/Runtime/Providers/Controllers/UltraleapHandControllerDataProvider.cs/#L150">View Source</a>
+  </span>
+  <a id="XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_Enable_" data-uid="XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.Enable*"></a>
+  <h4 id="XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_Enable" data-uid="XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.Enable">Enable()</h4>
+  <div class="markdown level1 summary"><p>Optional Enable function to enable / re-enable the service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Enable()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_Enable">BaseService.Enable()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_FixedUpdate.md&amp;value=---%0Auid%3A%20XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.FixedUpdate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.ultraleap/Runtime/Providers/Controllers/UltraleapHandControllerDataProvider.cs/#L206">View Source</a>
+  </span>
+  <a id="XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_FixedUpdate_" data-uid="XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.FixedUpdate*"></a>
+  <h4 id="XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_FixedUpdate" data-uid="XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.FixedUpdate">FixedUpdate()</h4>
+  <div class="markdown level1 summary"><p>Optional FixedUpdate function to perform updates that are fixed to the Physics timestep.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void FixedUpdate()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_FixedUpdate">BaseService.FixedUpdate()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_TryGetHandData_Hand_XRTK_Definitions_Controllers_Hands_HandData__.md&amp;value=---%0Auid%3A%20XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.TryGetHandData(Hand%2CXRTK.Definitions.Controllers.Hands.HandData%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.ultraleap/Runtime/Providers/Controllers/UltraleapHandControllerDataProvider.cs/#L530">View Source</a>
+  </span>
+  <a id="XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_TryGetHandData_" data-uid="XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.TryGetHandData*"></a>
+  <h4 id="XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_TryGetHandData_Hand_XRTK_Definitions_Controllers_Hands_HandData__" data-uid="XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.TryGetHandData(Hand,XRTK.Definitions.Controllers.Hands.HandData@)">TryGetHandData(Hand, out HandData)</h4>
+  <div class="markdown level1 summary"><p>Transforms platform provided hand tracking information to agnostic <a class="xref" href="XRTK.Definitions.Controllers.Hands.HandData.html">HandData</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryGetHandData(Hand hand, out HandData handData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Hand</span></td>
+        <td><span class="parametername">hand</span></td>
+        <td><p>The <see cref="!:Hand"></see> tracking data provided by the platform.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="XRTK.Definitions.Controllers.Hands.HandData.html">HandData</a></td>
+        <td><span class="parametername">handData</span></td>
+        <td><p>The output <a class="xref" href="XRTK.Definitions.Controllers.Hands.HandData.html">HandData</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True, if data conversion was a success.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_Update.md&amp;value=---%0Auid%3A%20XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.Update%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.ultraleap/Runtime/Providers/Controllers/UltraleapHandControllerDataProvider.cs/#L180">View Source</a>
+  </span>
+  <a id="XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_Update_" data-uid="XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.Update*"></a>
+  <h4 id="XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider_Update" data-uid="XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider.Update">Update()</h4>
+  <div class="markdown level1 summary"><p>Optional Update function to perform per-frame updates of the service.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Update()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_Update">BaseService.Update()</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="XRTK.Interfaces.Providers.Controllers.Hands.IMixedRealityHandControllerDataProvider.html">IMixedRealityHandControllerDataProvider</a>
+  </div>
+  <div>
+      <a class="xref" href="XRTK.Interfaces.Providers.Controllers.IMixedRealityControllerDataProvider.html">IMixedRealityControllerDataProvider</a>
+  </div>
+  <div>
+      <a class="xref" href="XRTK.Interfaces.Providers.IMixedRealityInputDataProvider.html">IMixedRealityInputDataProvider</a>
+  </div>
+  <div>
+      <a class="xref" href="XRTK.Interfaces.IMixedRealityDataProvider.html">IMixedRealityDataProvider</a>
+  </div>
+  <div>
+      <a class="xref" href="XRTK.Interfaces.IMixedRealityService.html">IMixedRealityService</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="XRTK.Extensions.ConverterExtensions.html#XRTK_Extensions_ConverterExtensions_GetBuiltInTypeBytes__1___0_">ConverterExtensions.GetBuiltInTypeBytes&lt;T&gt;(T)</a>
+  </div>
+  <div>
+      <a class="xref" href="XRTK.Utilities.Async.Awaiters.html#XRTK_Utilities_Async_Awaiters_WaitUntil__1___0_System_Func___0_System_Boolean__System_Int32_">Awaiters.WaitUntil&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Int32)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_Ultraleap_Providers_Controllers_UltraleapHandControllerDataProvider.md&amp;value=---%0Auid%3A%20XRTK.Ultraleap.Providers.Controllers.UltraleapHandControllerDataProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.ultraleap/Runtime/Providers/Controllers/UltraleapHandControllerDataProvider.cs/#L31" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            (c) XRTK
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

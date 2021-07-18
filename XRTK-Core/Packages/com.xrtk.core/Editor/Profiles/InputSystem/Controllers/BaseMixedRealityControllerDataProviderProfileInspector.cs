@@ -213,8 +213,6 @@ namespace XRTK.Editor.Profiles.InputSystem.Controllers
                         break;
                 }
             }
-
-            EditorGUILayout.Space();
         }
 
         private void DrawAdvancedControllerMappingProfilesView()

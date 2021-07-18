@@ -73,7 +73,8 @@
   
   <h1 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider" class="text-break">Class WindowsMixedRealityControllerDataProvider
   </h1>
-  <div class="markdown level0 summary"><p>The device manager for Windows Mixed Reality controllers.</p>
+  <div class="markdown level0 summary"><p>This data provider feeds controller data for Windows Mixed Reality controllers to the <a class="xref" href="XRTK.Interfaces.InputSystem.IMixedRealityInputSystem.html">IMixedRealityInputSystem</a>
+and manages <a class="xref" href="XRTK.Interfaces.Providers.Controllers.IMixedRealityController.html">IMixedRealityController</a> instances as needed.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -83,10 +84,12 @@
     <div class="level2"><a class="xref" href="XRTK.Services.BaseServiceWithConstructor.html">BaseServiceWithConstructor</a></div>
     <div class="level3"><a class="xref" href="XRTK.Services.BaseDataProvider.html">BaseDataProvider</a></div>
     <div class="level4"><a class="xref" href="XRTK.Providers.Controllers.BaseControllerDataProvider.html">BaseControllerDataProvider</a></div>
-    <div class="level5"><span class="xref">WindowsMixedRealityControllerDataProvider</span></div>
+    <div class="level5"><a class="xref" href="XRTK.Providers.Controllers.Hands.BaseHandControllerDataProvider.html">BaseHandControllerDataProvider</a></div>
+    <div class="level6"><span class="xref">WindowsMixedRealityControllerDataProvider</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="XRTK.Interfaces.Providers.Controllers.Hands.IMixedRealityHandControllerDataProvider.html">IMixedRealityHandControllerDataProvider</a></div>
     <div><a class="xref" href="XRTK.Interfaces.Providers.Controllers.IMixedRealityControllerDataProvider.html">IMixedRealityControllerDataProvider</a></div>
     <div><a class="xref" href="XRTK.Interfaces.Providers.IMixedRealityInputDataProvider.html">IMixedRealityInputDataProvider</a></div>
     <div><a class="xref" href="XRTK.Interfaces.IMixedRealityDataProvider.html">IMixedRealityDataProvider</a></div>
@@ -96,7 +99,25 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="XRTK.Providers.Controllers.Hands.BaseHandControllerDataProvider.html#XRTK_Providers_Controllers_Hands_BaseHandControllerDataProvider_RenderingMode">BaseHandControllerDataProvider.RenderingMode</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.Hands.BaseHandControllerDataProvider.html#XRTK_Providers_Controllers_Hands_BaseHandControllerDataProvider_HandPhysicsEnabled">BaseHandControllerDataProvider.HandPhysicsEnabled</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.Hands.BaseHandControllerDataProvider.html#XRTK_Providers_Controllers_Hands_BaseHandControllerDataProvider_UseTriggers">BaseHandControllerDataProvider.UseTriggers</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.Hands.BaseHandControllerDataProvider.html#XRTK_Providers_Controllers_Hands_BaseHandControllerDataProvider_BoundsMode">BaseHandControllerDataProvider.BoundsMode</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.Hands.BaseHandControllerDataProvider.html#XRTK_Providers_Controllers_Hands_BaseHandControllerDataProvider_TrackedPoses">BaseHandControllerDataProvider.TrackedPoses</a>
+    </div>
+    <div>
       <a class="xref" href="XRTK.Providers.Controllers.BaseControllerDataProvider.html#XRTK_Providers_Controllers_BaseControllerDataProvider_InputSystem">BaseControllerDataProvider.InputSystem</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Providers.Controllers.BaseControllerDataProvider.html#XRTK_Providers_Controllers_BaseControllerDataProvider_ActiveControllers">BaseControllerDataProvider.ActiveControllers</a>
     </div>
     <div>
       <a class="xref" href="XRTK.Providers.Controllers.BaseControllerDataProvider.html#XRTK_Providers_Controllers_BaseControllerDataProvider_GetControllerMappingProfile_System_Type_XRTK_Definitions_Utilities_Handedness_">BaseControllerDataProvider.GetControllerMappingProfile(Type, Handedness)</a>
@@ -106,9 +127,6 @@
     </div>
     <div>
       <a class="xref" href="XRTK.Providers.Controllers.BaseControllerDataProvider.html#XRTK_Providers_Controllers_BaseControllerDataProvider_RemoveController_XRTK_Interfaces_Providers_Controllers_IMixedRealityController_">BaseControllerDataProvider.RemoveController(IMixedRealityController)</a>
-    </div>
-    <div>
-      <a class="xref" href="XRTK.Providers.Controllers.BaseControllerDataProvider.html#XRTK_Providers_Controllers_BaseControllerDataProvider_ActiveControllers">BaseControllerDataProvider.ActiveControllers</a>
     </div>
     <div>
       <a class="xref" href="XRTK.Services.BaseDataProvider.html#XRTK_Services_BaseDataProvider_ParentService">BaseDataProvider.ParentService</a>
@@ -126,10 +144,19 @@
       <a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_Reset">BaseService.Reset()</a>
     </div>
     <div>
+      <a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_Enable">BaseService.Enable()</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_Update">BaseService.Update()</a>
+    </div>
+    <div>
       <a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_LateUpdate">BaseService.LateUpdate()</a>
     </div>
     <div>
       <a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_FixedUpdate">BaseService.FixedUpdate()</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_Disable">BaseService.Disable()</a>
     </div>
     <div>
       <a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_Destroy">BaseService.Destroy()</a>
@@ -142,6 +169,9 @@
     </div>
     <div>
       <a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_Dispose">BaseService.Dispose()</a>
+    </div>
+    <div>
+      <a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_OnDispose_System_Boolean_">BaseService.OnDispose(Boolean)</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
@@ -169,10 +199,9 @@
   <h6><strong>Assembly</strong>: XRTK.WindowsMixedReality.dll</h6>
   <h5 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete]
-[RuntimePlatform(typeof(UniversalWindowsPlatform))]
+    <pre><code class="lang-csharp hljs">[RuntimePlatform(typeof(UniversalWindowsPlatform))]
 [Guid(&quot;12E02EF8-4177-46AB-BC50-19AF7148BD4A&quot;)]
-public class WindowsMixedRealityControllerDataProvider : BaseControllerDataProvider, IMixedRealityControllerDataProvider, IMixedRealityInputDataProvider, IMixedRealityDataProvider, IMixedRealityService, IDisposable</code></pre>
+public class WindowsMixedRealityControllerDataProvider : BaseHandControllerDataProvider, IMixedRealityHandControllerDataProvider, IMixedRealityControllerDataProvider, IMixedRealityInputDataProvider, IMixedRealityDataProvider, IMixedRealityService, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -181,7 +210,7 @@ public class WindowsMixedRealityControllerDataProvider : BaseControllerDataProvi
     <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider__ctor_System_String_System_UInt32_XRTK_WindowsMixedReality_Profiles_WindowsMixedRealityControllerDataProviderProfile_XRTK_Interfaces_InputSystem_IMixedRealityInputSystem_.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.%23ctor(System.String%2CSystem.UInt32%2CXRTK.WindowsMixedReality.Profiles.WindowsMixedRealityControllerDataProviderProfile%2CXRTK.Interfaces.InputSystem.IMixedRealityInputSystem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityControllerDataProvider.cs/#L43">View Source</a>
+    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityControllerDataProvider.cs/#L38">View Source</a>
   </span>
   <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider__ctor_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.#ctor*"></a>
   <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider__ctor_System_String_System_UInt32_XRTK_WindowsMixedReality_Profiles_WindowsMixedRealityControllerDataProviderProfile_XRTK_Interfaces_InputSystem_IMixedRealityInputSystem_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.#ctor(System.String,System.UInt32,XRTK.WindowsMixedReality.Profiles.WindowsMixedRealityControllerDataProviderProfile,XRTK.Interfaces.InputSystem.IMixedRealityInputSystem)">WindowsMixedRealityControllerDataProvider(String, UInt32, WindowsMixedRealityControllerDataProviderProfile, IMixedRealityInputSystem)</h4>
@@ -223,355 +252,10 @@ public class WindowsMixedRealityControllerDataProvider : BaseControllerDataProvi
       </tr>
     </tbody>
   </table>
-  <h3 id="fields">Fields
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_MaxInteractionSourceStates.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.MaxInteractionSourceStates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityControllerDataProvider.cs/#L72">View Source</a>
-  </span>
-  <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_MaxInteractionSourceStates" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.MaxInteractionSourceStates">MaxInteractionSourceStates</h4>
-  <div class="markdown level1 summary"><p>The max expected sources is two - two controllers and/or two hands.
-We'll set it to 20 just to be certain we can't run out of sources.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const int MaxInteractionSourceStates = 20</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_GestureRecognizerEnabled.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.GestureRecognizerEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityControllerDataProvider.cs/#L102">View Source</a>
-  </span>
-  <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_GestureRecognizerEnabled_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.GestureRecognizerEnabled*"></a>
-  <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_GestureRecognizerEnabled" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.GestureRecognizerEnabled">GestureRecognizerEnabled</h4>
-  <div class="markdown level1 summary"><p>Enables or disables the gesture recognizer.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool GestureRecognizerEnabled { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_GestureRecognizerEnabled_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Automatically disabled navigation recognizer if enabled.</p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_GestureSettings.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.GestureSettings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityControllerDataProvider.cs/#L158">View Source</a>
-  </span>
-  <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_GestureSettings_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.GestureSettings*"></a>
-  <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_GestureSettings" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.GestureSettings">GestureSettings</h4>
-  <div class="markdown level1 summary"><p>Current Gesture Settings for the GestureRecognizer</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WindowsGestureSettings GestureSettings { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XRTK.Definitions.InputSystem.WindowsGestureSettings.html">WindowsGestureSettings</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_LastInteractionManagerStateReading.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.LastInteractionManagerStateReading%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityControllerDataProvider.cs/#L92">View Source</a>
-  </span>
-  <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_LastInteractionManagerStateReading_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.LastInteractionManagerStateReading*"></a>
-  <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_LastInteractionManagerStateReading" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.LastInteractionManagerStateReading">LastInteractionManagerStateReading</h4>
-  <div class="markdown level1 summary"><p>The current source state reading for the Unity InteractionManager for UWP</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InteractionSourceState[] LastInteractionManagerStateReading { get; protected set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://stephenhodgson.github.io/UnityCsReference/api/UnityEngine.XR.WSA.Input.InteractionSourceState.html">InteractionSourceState</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_NavigationRecognizerEnabled.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.NavigationRecognizerEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityControllerDataProvider.cs/#L131">View Source</a>
-  </span>
-  <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_NavigationRecognizerEnabled_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.NavigationRecognizerEnabled*"></a>
-  <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_NavigationRecognizerEnabled" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.NavigationRecognizerEnabled">NavigationRecognizerEnabled</h4>
-  <div class="markdown level1 summary"><p>Enables or disables the navigation recognizer.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool NavigationRecognizerEnabled { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_NavigationRecognizerEnabled_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Automatically disables the gesture recognizer if enabled.</p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_NavigationSettings.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.NavigationSettings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityControllerDataProvider.cs/#L177">View Source</a>
-  </span>
-  <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_NavigationSettings_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.NavigationSettings*"></a>
-  <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_NavigationSettings" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.NavigationSettings">NavigationSettings</h4>
-  <div class="markdown level1 summary"><p>Current Navigation Gesture Recognizer Settings.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WindowsGestureSettings NavigationSettings { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XRTK.Definitions.InputSystem.WindowsGestureSettings.html">WindowsGestureSettings</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_RailsNavigationSettings.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.RailsNavigationSettings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityControllerDataProvider.cs/#L196">View Source</a>
-  </span>
-  <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_RailsNavigationSettings_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.RailsNavigationSettings*"></a>
-  <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_RailsNavigationSettings" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.RailsNavigationSettings">RailsNavigationSettings</h4>
-  <div class="markdown level1 summary"><p>Current Navigation Gesture Recognizer Rails Settings.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WindowsGestureSettings RailsNavigationSettings { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="XRTK.Definitions.InputSystem.WindowsGestureSettings.html">WindowsGestureSettings</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_UseRailsNavigation.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.UseRailsNavigation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityControllerDataProvider.cs/#L215">View Source</a>
-  </span>
-  <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_UseRailsNavigation_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.UseRailsNavigation*"></a>
-  <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_UseRailsNavigation" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.UseRailsNavigation">UseRailsNavigation</h4>
-  <div class="markdown level1 summary"><p>Should the Navigation Gesture Recognizer use Rails?</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool UseRailsNavigation { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_Disable.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.Disable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityControllerDataProvider.cs/#L347">View Source</a>
-  </span>
-  <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_Disable_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.Disable*"></a>
-  <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_Disable" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.Disable">Disable()</h4>
-  <div class="markdown level1 summary"><p>Optional Disable function to pause the service.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Disable()</code></pre>
-  </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_Disable">BaseService.Disable()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_Enable.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.Enable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityControllerDataProvider.cs/#L245">View Source</a>
-  </span>
-  <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_Enable_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.Enable*"></a>
-  <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_Enable" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.Enable">Enable()</h4>
-  <div class="markdown level1 summary"><p>Optional Enable function to enable / re-enable the service.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Enable()</code></pre>
-  </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_Enable">BaseService.Enable()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_OnDispose_System_Boolean_.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.OnDispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityControllerDataProvider.cs/#L377">View Source</a>
-  </span>
-  <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_OnDispose_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.OnDispose*"></a>
-  <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_OnDispose_System_Boolean_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.OnDispose(System.Boolean)">OnDispose(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnDispose(bool finalizing)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">finalizing</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_OnDispose_System_Boolean_">BaseService.OnDispose(Boolean)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_Update.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.Update%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityControllerDataProvider.cs/#L317">View Source</a>
-  </span>
-  <a id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_Update_" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.Update*"></a>
-  <h4 id="XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider_Update" data-uid="XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider.Update">Update()</h4>
-  <div class="markdown level1 summary"><p>Optional Update function to perform per-frame updates of the service.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Update()</code></pre>
-  </div>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="XRTK.Services.BaseService.html#XRTK_Services_BaseService_Update">BaseService.Update()</a></div>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="XRTK.Interfaces.Providers.Controllers.Hands.IMixedRealityHandControllerDataProvider.html">IMixedRealityHandControllerDataProvider</a>
+  </div>
   <div>
       <a class="xref" href="XRTK.Interfaces.Providers.Controllers.IMixedRealityControllerDataProvider.html">IMixedRealityControllerDataProvider</a>
   </div>
@@ -594,12 +278,6 @@ We'll set it to 20 just to be certain we can't run out of sources.</p>
   <div>
       <a class="xref" href="XRTK.Utilities.Async.Awaiters.html#XRTK_Utilities_Async_Awaiters_WaitUntil__1___0_System_Func___0_System_Boolean__System_Int32_">Awaiters.WaitUntil&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Int32)</a>
   </div>
-  <div>
-      <a class="xref" href="XRTK.Extensions.ConverterExtensions.html#XRTK_Extensions_ConverterExtensions_GetBuiltInTypeBytes__1___0_">ConverterExtensions.GetBuiltInTypeBytes&lt;T&gt;(T)</a>
-  </div>
-  <div>
-      <a class="xref" href="XRTK.Utilities.Async.Awaiters.html#XRTK_Utilities_Async_Awaiters_WaitUntil__1___0_System_Func___0_System_Boolean__System_Int32_">Awaiters.WaitUntil&lt;T&gt;(T, Func&lt;T, Boolean&gt;, Int32)</a>
-  </div>
 </article>
           </div>
           
@@ -611,7 +289,7 @@ We'll set it to 20 just to be certain we can't run out of sources.</p>
                     <a href="https://github.com/XRTK/XRTK-Core/new/development/docs-ref-overwrite/new?filename=XRTK_WindowsMixedReality_Providers_Controllers_WindowsMixedRealityControllerDataProvider.md&amp;value=---%0Auid%3A%20XRTK.WindowsMixedReality.Providers.Controllers.WindowsMixedRealityControllerDataProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityControllerDataProvider.cs/#L37" class="contribution-link">View Source</a>
+                    <a href="https://github.com/XRTK/XRTK-Core/blob/development/XRTK-Core/Packages/com.xrtk.wmr/Runtime/Providers/Controllers/WindowsMixedRealityControllerDataProvider.cs/#L33" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

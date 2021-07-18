@@ -9,7 +9,7 @@ The Mixed Reality Toolkit provides many ways for users and developers to get acc
   > **Note:** To utilize this method, use the `upm` branch for each respective project. For Example:
   >
   > `https://github.com/XRTK/XRTK-Core.git#upm`
-* [GIT Submodules](#git-submodules) - For advanced developers who want to use the Mixed Reality Toolkit in their live project and contribute direcly back to the project in real time.
+* [GIT Submodules](#git-submodules) - For advanced developers who want to use the Mixed Reality Toolkit in their live project and contribute directly back to the project in real time.
 
 In this article, we will walk through each approach to get you up and running, starting with the simplest first.
 
@@ -42,6 +42,8 @@ Which will list all the current XRTK packages available for install.  If you als
 Once you are ready, simply install the XRTK and any platforms you wish to use in your project to get started.
 
 > We recommend starting with the **XRTK.SDK** package to begin with, which will also install the Core XRTK package, for the simplest path to begin with.
+
+Once you've installed all the packages you wish to utilize, you can continue to [Configuring your base scene](00-GettingStarted.md#configure-your-base-scene).
 
 ## Automatic UPM Installation
 
@@ -100,8 +102,8 @@ Advanced developers and those wishing to contribute to the Mixed Reality Toolkit
 
 ### Prerequisites
 
-* Each contributor to the project will need to have [git installed](https://git-scm.com/) on their machines with the proper envionment variable set so the symbolic linker can find and execute git commands via the terminal.
-* You'll need to install the core pacakge via one of the [traditional installation](#automatic-upm-installation) paths before you can create symbolic links in your project using the editor context menu in later setup steps.
+* Each contributor to the project will need to have [git installed](https://git-scm.com/) on their machines with the proper environment variable set so the symbolic linker can find and execute git commands via the terminal.
+* You'll need to install the core package via one of the [traditional installation](#automatic-upm-installation) paths before you can create symbolic links in your project using the editor context menu in later setup steps.
 
 ### Setup Steps
 
@@ -114,9 +116,9 @@ Advanced developers and those wishing to contribute to the Mixed Reality Toolkit
 4. Using the symbolic link wizard, choose the source folder for the package you wish you replace with the editable version, and the target path for your project, then import the package.
   ![Symbolic Link Wizard](../images/DownloadingTheXRTK/SymbolicLinkWizard.png)
     > <font color="orange">**Important:**</font> It's strongly advised to use the `Packages` folder as your target path for all symbolically linked packages.
-5. Repeat step 4 for each additoinal package you'd like to directly modify.
+5. Repeat step 4 for each additional package you'd like to directly modify.
 
-This workflow works with any project using GIT and the symbolically linked folders can be customized to utilize any path availible under source control.
+This workflow works with any project using GIT and the symbolically linked folders can be customized to utilize any path available under source control.
 
 ---
 

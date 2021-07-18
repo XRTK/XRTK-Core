@@ -12,9 +12,9 @@ namespace XRTK.Editor.BuildPipeline
         private SerializedProperty bundleIdentifier;
         private SerializedProperty install;
 
-        private BuildInfo buildInfo;
+        protected BuildInfo buildInfo;
 
-        protected void OnEnable()
+        protected virtual void OnEnable()
         {
             autoIncrement = serializedObject.FindProperty(nameof(autoIncrement));
             bundleIdentifier = serializedObject.FindProperty(nameof(bundleIdentifier));
